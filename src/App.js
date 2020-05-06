@@ -2,6 +2,7 @@ import React, {Component, createContext} from 'react';
 import './App.css';
 import CartList from "./components/CartList";
 import Form from "./components/Form";
+import Spinner from "./components/Spinner";
 
 // import items from "./data";
 
@@ -72,6 +73,7 @@ export default class App extends Component {
                 deleteItem: this.deleteItem
             }}>
                 <div className="container">
+                    <Spinner />
                     <Form addItem={this.addItem} />
                     {this.state.loading && <h1>Loading ... </h1>}
                     {this.state.error && <h1>{this.state.error}</h1>}
