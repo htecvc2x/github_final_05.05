@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from 'prop-types';
 
 import './Spinner.css'
 
@@ -34,3 +35,9 @@ export default class Spinner extends Component {
         )
     }
 }
+
+Spinner.propTypes = {
+      styleDisplay : PropTypes.oneOf(['none', 'block'])
+
+};
+
