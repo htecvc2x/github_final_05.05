@@ -73,7 +73,7 @@ export default class App extends Component {
                 deleteItem: this.deleteItem
             }}>
                 <div className="container">
-                    <Spinner />
+                    <Spinner styleDisplay="none"/>
                     <Form addItem={this.addItem} />
                     {this.state.loading && <h1>Loading ... </h1>}
                     {this.state.error && <h1>{this.state.error}</h1>}

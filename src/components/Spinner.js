@@ -4,6 +4,7 @@ import './Spinner.css'
 
 export default class Spinner extends Component {
     render() {
+        const {styleDisplay} = this.props;
         return (
             <div
                 style={{
@@ -13,7 +14,7 @@ export default class Spinner extends Component {
                     backgroundColor: "rgba(0,0,0,.8)",
                     height: "100vh",
                     width: "100%",
-                    display: "none"
+                    display: styleDisplay
                 }}
             >
                 <div
