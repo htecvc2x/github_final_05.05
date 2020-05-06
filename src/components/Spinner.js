@@ -5,7 +5,13 @@ import './Spinner.css'
 
 export default class Spinner extends Component {
     render() {
-        const {styleDisplay} = this.props;
+        const {loading} = this.props;
+
+        let styleDisplay = 'none';
+        if (loading) {
+            styleDisplay = 'block';
+        }
+
         return (
             <div
                 style={{
@@ -36,8 +42,11 @@ export default class Spinner extends Component {
     }
 }
 
-Spinner.propTypes = {
-      styleDisplay : PropTypes.oneOf(['none', 'block'])
+Spinner.defaultProps = {
+      loading : false
+};
 
+Spinner.propTypes = {
+      loading : PropTypes.bool
 };
 
